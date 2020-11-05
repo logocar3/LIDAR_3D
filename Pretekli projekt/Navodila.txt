@@ -1,0 +1,64 @@
+Opisi posameznih map s programi, kaj katera opravlja.
+
+Za 3D LIDAR najbolj zanimiva mapa je "Voznja naravnost", kjer je implementirana regulacija motorjev
+
+====================
+
+To so ta pomembnejše kode oz. kode katere so bile uporabljene in ne samo moji zapiski oz. poskusi in pripomoèki
+NAVODILA ZA UPORABO PROGRAMSKIH KOD:
+
+ROBOT- VisualStudio
+
+'Encoderji'
+	Niè posebnega, naložimo kodo na robotka in na serial portu se izpisujejo vrednosti enkoderjev ko vrtimo kolesa robota
+
+'naravnost'
+ 	v 40 vrstici kode je potrabno posodobiti ssid in password WiFI omrežja. Kadar naložimo kodo robota moramo na serial portu pogledati ip naslov robota da lahko nato preko brskalnika dostopamo do datoteke s podatki.
+
+'odziv stopnica naravnost'
+	enako kot pri kodi 'naravnost'. Preko kode pridobimo podatke za identifikacijo modela
+
+'popravljeni senzor'
+	Ponovno posodobiti podatke za Wifi in potrebno pridobiti IP naslov robota. Koda preverja delovanje RGB senzorja in vrne vrednosti RGB (pomembno za sledenje èrti- doloèitev vrednosti RGB roba èrte)
+
+'prizig motorjev'
+	Koda niè posebnega. Testira delovanje motorjev
+
+'barvni senzor'
+	Enako kot 'popravljeni senzor'
+
+'Sledenje crti'
+	Popraviti Wifi podatke in pridobiti IP naslov. Popraviti referencno vrednost za sledenje èrti katera ustreza robu èrte.
+
+'TEST'
+	Prižig led luèke na ESP32
+
+'Voznja naravnost'
+	Zadnja verzija 'naravnost'.
+
+'WiFi prenos'
+	Posodobiti podatke WiFi in pridobiti IP naslov robota. Koda preveri povezavo na strežnik in èe lahko naloži datoteko.
+
+'zapis na sd kartico'
+	Koda preverja delovanje SD kartice.
+
+MATLAB
+
+
+/matlab/vožnja naravnost/eksperimetni/stopnice.m  koda generira stopnièast signal z razlièno dolgimi stopnicami in razliènimi amplitudami. Ta signal nato uporabimo v kodi 'odziv stopnica naravnost' da pridobimo odziv robota in nato te podatke uporabimo za identifikcaijo sistema
+
+
+/matlab/vožnja naravnost:
+/modeliranje.m potrebno naložiti csv datoteko iz 'odziv stopnica naravnost'. V 107 vrstici nastaviti vrednost parametra n (red sistema). Vrstica 167 nam generira stopnico za simulink kodo 'odrezan_1_sample'. Spremelnjivki cas_simu in izhod_zvezni pridobimo is simulnika 'odrezan_1_sample'
+
+/LEGO SEMINAR:
+/predikicja_modela.m	V vrstici 107 doloèiti red sistema n. Pridobimo parametre theta.
+/predikcija.m 		V 10 vrstici doloèimo vrednost k parametra za predikcijo. v 58 in 60 vrstici dobimo spremenljivke iz simulink sheme C:\Users\Kevin\Desktop\LEGO SEMINAR\matlab\Sledneje èrti\STOPNICE/odziv_na_stopnico_slednenje_crti.slx
+
+
+
+
+
+
+
+

@@ -1,0 +1,132 @@
+Processing esp32doit-devkit-v1 (platform: espressif32; board: esp32doit-devkit-v1; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32doit-devkit-v1.html
+PLATFORM: Espressif 32 > DOIT ESP32 DEVKIT V1
+HARDWARE: ESP32 240MHz 320KB RAM (4MB Flash)
+DEBUG: CURRENT(esp-prog) EXTERNAL(esp-prog, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny)
+Library Dependency Finder -> http://bit.ly/configure-pio-ldf
+LDF MODES: FINDER(chain) COMPATIBILITY(soft)
+Collected 28 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- <ESPmDNS> 1.0
+|   |-- <WiFi> 1.2.7
+|   |   |-- <SPI> 1.0
+|-- <SD(esp32)> 1.0.5
+|   |-- <SPI> 1.0
+|   |-- <FS> 1.0
+|-- <ESP32WebServer> 1.0
+|   |-- <WiFi> 1.2.7
+|   |   |-- <SPI> 1.0
+|   |-- <FS> 1.0
+|-- <WiFi> 1.0
+|-- <SPI> 1.0
+|-- <WiFi> 1.2.7
+|   |-- <SPI> 1.0
+|-- <FS> 1.0
+Compiling .pioenvs\esp32doit-devkit-v1\src\main.cpp.o
+Compiling .pioenvs\esp32doit-devkit-v1\libd55\ESPmDNS\ESPmDNS.cpp.o
+Compiling .pioenvs\esp32doit-devkit-v1\lib108\SD\sd_diskio_crc.c.o
+Compiling .pioenvs\esp32doit-devkit-v1\lib3ce\ESP32WebServer_ID2007\ESP32WebServer.cpp.o
+Archiving .pioenvs\esp32doit-devkit-v1\lib108\libSD.a
+Compiling .pioenvs\esp32doit-devkit-v1\lib3ce\ESP32WebServer_ID2007\Parsing.cpp.o
+In file included from src\main.cpp:9:0:
+C:\Users\Kevin\.platformio\lib\ESP32WebServer_ID2007\src/ESP32WebServer.h:162:15: error: cannot declare field 'ESP32WebServer::_server' to be of abstract type 'WiFiServer'
+WiFiServer  _server;
+^
+In file included from C:\Users\Kevin\.platformio\lib\WiFi_ID870\src/WiFi.h:32:0,
+from src\main.cpp:7:
+C:\Users\Kevin\.platformio\lib\WiFi_ID870\src/WiFiServer.h:31:7: note:   because
+the following virtual functions are pure within 'WiFiServer':
+class WiFiServer : public Server {
+^
+In file included from C:\Users\Kevin\.platformio\packages\framework-arduinoespressif32\cores\esp32/Arduino.h:156:0,
+from src\main.cpp:1:
+C:\Users\Kevin\.platformio\packages\framework-arduinoespressif32\cores\esp32/Server.h:28:18: note:       virtual void Server::begin(uint16_t)
+virtual void begin(uint16_t port=0) =0;
+^
+src\main.cpp: In function 'void setup()':
+src\main.cpp:57:28: error: invalid conversion from 'const char*' to 'char*' [-fpermissive]
+WiFi.begin(ssid, password);
+^
+In file included from src\main.cpp:7:0:
+C:\Users\Kevin\.platformio\lib\WiFi_ID870\src/WiFi.h:79:9: note:   initializing argument 1 of 'int WiFiClass::begin(char*, const char*)'
+int begin(char* ssid, const char *passphrase);
+^
+src\main.cpp:74:18: error: 'handleRoot' was not declared in this scope
+server.on("/", handleRoot);
+^
+src\main.cpp:75:21: error: 'handleNotFound' was not declared in this scope
+server.onNotFound(handleNotFound);
+^
+src\main.cpp:77:31: error: 'File_Download' was not declared in this scope
+server.on("/File_Download", File_Download);
+^
+src\main.cpp: In function 'void File_Download()':
+src\main.cpp:104:31: error: 'SD_file_download' was not declared in this scope
+SD_file_download("/tekst.txt");
+^
+src\main.cpp: At global scope:
+src\main.cpp:108:22: error: variable or field 'SD_file_download' declared void
+void SD_file_download("/tekst.txt"){
+^
+*** [.pioenvs\esp32doit-devkit-v1\src\main.cpp.o] Error 1
+C:\Users\Kevin\.platformio\packages\framework-arduinoespressif32\libraries\ESPmDNS\src\ESPmDNS.cpp: In member function 'bool MDNSResponder::begin(const char*)':
+C:\Users\Kevin\.platformio\packages\framework-arduinoespressif32\libraries\ESPmDNS\src\ESPmDNS.cpp:60:10: error: 'class WiFiClass' has no member named 'onEvent'
+WiFi.onEvent(_on_sys_event);
+^
+*** [.pioenvs\esp32doit-devkit-v1\libd55\ESPmDNS\ESPmDNS.cpp.o] Error 1
+In file included from C:\Users\Kevin\.platformio\lib\ESP32WebServer_ID2007\src\ESP32WebServer.cpp:28:0:
+C:\Users\Kevin\.platformio\lib\ESP32WebServer_ID2007\src\ESP32WebServer.h:162:15: error: cannot declare field 'ESP32WebServer::_server' to be of abstract type 'WiFiServer'
+WiFiServer  _server;
+^
+In file included from C:\Users\Kevin\.platformio\lib\ESP32WebServer_ID2007\src\ESP32WebServer.cpp:26:0:
+C:\Users\Kevin\.platformio\lib\WiFi_ID870\src/WiFiServer.h:31:7: note:   because
+the following virtual functions are pure within 'WiFiServer':
+class WiFiServer : public Server {
+^
+In file included from C:\Users\Kevin\.platformio\packages\framework-arduinoespressif32\cores\esp32/Arduino.h:156:0,
+from C:\Users\Kevin\.platformio\lib\ESP32WebServer_ID2007\src\ESP32WebServer.cpp:24:
+C:\Users\Kevin\.platformio\packages\framework-arduinoespressif32\cores\esp32/Server.h:28:18: note:       virtual void Server::begin(uint16_t)
+virtual void begin(uint16_t port=0) =0;
+^
+C:\Users\Kevin\.platformio\lib\ESP32WebServer_ID2007\src\ESP32WebServer.cpp: In constructor 'ESP32WebServer::ESP32WebServer(IPAddress, int)':
+C:\Users\Kevin\.platformio\lib\ESP32WebServer_ID2007\src\ESP32WebServer.cpp:55:17: error: no matching function for call to 'WiFiServer::WiFiServer(IPAddress&, int&)'
+, _chunked(false)
+^
+In file included from C:\Users\Kevin\.platformio\lib\ESP32WebServer_ID2007\src\ESP32WebServer.cpp:26:0:
+C:\Users\Kevin\.platformio\lib\WiFi_ID870\src/WiFiServer.h:36:3: note: candidate: WiFiServer::WiFiServer(uint16_t)
+WiFiServer(uint16_t);
+^
+C:\Users\Kevin\.platformio\lib\WiFi_ID870\src/WiFiServer.h:36:3: note:   candidate expects 1 argument, 2 provided
+C:\Users\Kevin\.platformio\lib\WiFi_ID870\src/WiFiServer.h:31:7: note: candidate: constexpr WiFiServer::WiFiServer(const WiFiServer&)
+class WiFiServer : public Server {
+^
+C:\Users\Kevin\.platformio\lib\WiFi_ID870\src/WiFiServer.h:31:7: note:   candidate expects 1 argument, 2 provided
+C:\Users\Kevin\.platformio\lib\WiFi_ID870\src/WiFiServer.h:31:7: note: candidate: constexpr WiFiServer::WiFiServer(WiFiServer&&)
+C:\Users\Kevin\.platformio\lib\WiFi_ID870\src/WiFiServer.h:31:7: note:   candidate expects 1 argument, 2 provided
+C:\Users\Kevin\.platformio\lib\ESP32WebServer_ID2007\src\ESP32WebServer.cpp: In member function 'void ESP32WebServer::close()':
+C:\Users\Kevin\.platformio\lib\ESP32WebServer_ID2007\src\ESP32WebServer.cpp:231:11: error: 'class WiFiServer' has no member named 'end'
+_server.end();
+^
+*** [.pioenvs\esp32doit-devkit-v1\lib3ce\ESP32WebServer_ID2007\ESP32WebServer.cpp.o] Error 1
+In file included from C:\Users\Kevin\.platformio\lib\ESP32WebServer_ID2007\src\Parsing.cpp:25:0:
+C:\Users\Kevin\.platformio\lib\ESP32WebServer_ID2007\src\ESP32WebServer.h:162:15: error: cannot declare field 'ESP32WebServer::_server' to be of abstract type 'WiFiServer'
+WiFiServer  _server;
+^
+In file included from C:\Users\Kevin\.platformio\lib\ESP32WebServer_ID2007\src\Parsing.cpp:23:0:
+C:\Users\Kevin\.platformio\lib\WiFi_ID870\src/WiFiServer.h:31:7: note:   because
+the following virtual functions are pure within 'WiFiServer':
+class WiFiServer : public Server {
+^
+In file included from C:\Users\Kevin\.platformio\packages\framework-arduinoespressif32\cores\esp32/Arduino.h:156:0,
+from C:\Users\Kevin\.platformio\lib\ESP32WebServer_ID2007\src\Parsing.cpp:22:
+C:\Users\Kevin\.platformio\packages\framework-arduinoespressif32\cores\esp32/Server.h:28:18: note:       virtual void Server::begin(uint16_t)
+virtual void begin(uint16_t port=0) =0;
+^
+*** [.pioenvs\esp32doit-devkit-v1\lib3ce\ESP32WebServer_ID2007\Parsing.cpp.o] Error 1
+========================== [ERROR] Took 3.50 seconds ==========================
+The terminal process terminated with exit code: 1
+
+Terminal will be reused by tasks, press any key to close it.

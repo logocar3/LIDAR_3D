@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"name": "barvni_senzor",
+			"path": "C:\\Users\\Kevin\\Desktop\\LEGO SEMINAR\\KEVIN SEMINAR\\SEMINAR\\ESP32_LEGO\\rgb senzor\\barvni_senzor"
+		},
+		{
+			"name": "Voznja naravnost",
+			"path": "C:\\Users\\Kevin\\Desktop\\LEGO SEMINAR\\KEVIN SEMINAR\\SEMINAR\\ESP32_LEGO\\Voznja naravnost"
+		},
+		{
+			"name": "sledenje_crti",
+			"path": "C:\\Users\\Kevin\\Desktop\\LEGO SEMINAR\\KEVIN SEMINAR\\SEMINAR\\ESP32_LEGO\\sledenje_crti"
+		}
+	],
+	"settings": {
+		"terminal.integrated.env.windows": {
+			"PATH": "C:\\Users\\Kevin\\.platformio\\penv\\Scripts;C:\\Users\\Kevin\\.platformio\\penv;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\GitExtensions\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\MATLAB\\R2017b\\runtime\\win64;C:\\Program Files\\MATLAB\\R2017b\\bin;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Users\\Kevin\\AppData\\Local\\Microsoft\\WindowsApps;;C:\\Users\\Kevin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\GitExtensions\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\MATLAB\\R2017b\\runtime\\win64;C:\\Program Files\\MATLAB\\R2017b\\bin;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Users\\Kevin\\AppData\\Local\\Microsoft\\WindowsApps;;C:\\Users\\Kevin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin",
+			"PLATFORMIO_CALLER": "vscode"
+		}
+	}
+}

@@ -1,0 +1,44 @@
+Processing esp32doit-devkit-v1 (platform: espressif32; board: esp32doit-devkit-v1; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32doit-devkit-v1.html
+PLATFORM: Espressif 32 > DOIT ESP32 DEVKIT V1
+HARDWARE: ESP32 240MHz 320KB RAM (4MB Flash)
+DEBUG: CURRENT(esp-prog) EXTERNAL(esp-prog, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny)
+Library Dependency Finder -> http://bit.ly/configure-pio-ldf
+LDF MODES: FINDER(chain) COMPATIBILITY(soft)
+Collected 27 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- <FS> 1.0
+|-- <ESPmDNS> 1.0
+|   |-- <WiFi> 1.0
+|-- <ESP32WebServer> 1.0
+|   |-- <FS> 1.0
+|   |-- <WiFi> 1.0
+|-- <SD(esp32)> 1.0.5
+|   |-- <SPI> 1.0
+|   |-- <FS> 1.0
+|-- <WiFi> 1.0
+|-- <SPI> 1.0
+Compiling .pioenvs\esp32doit-devkit-v1\src\main.cpp.o
+Generating partitions .pioenvs\esp32doit-devkit-v1\partitions.bin
+Compiling .pioenvs\esp32doit-devkit-v1\lib54b\FS\FS.cpp.o
+Compiling .pioenvs\esp32doit-devkit-v1\lib54b\FS\vfs_api.cpp.o
+Compiling .pioenvs\esp32doit-devkit-v1\lib220\WiFi\ETH.cpp.o
+src\main.cpp:11:21: fatal error: Network.h: No such file or directory
+
+*****************************************************************
+* Looking for Network.h dependency? Check our library registry!
+*
+* CLI  > platformio lib search "header:Network.h"
+* Web  > https://platformio.org/lib/search?query=header:Network.h
+*
+*****************************************************************
+
+compilation terminated.
+*** [.pioenvs\esp32doit-devkit-v1\src\main.cpp.o] Error 1
+========================== [ERROR] Took 3.18 seconds ==========================
+The terminal process terminated with exit code: 1
+
+Terminal will be reused by tasks, press any key to close it.

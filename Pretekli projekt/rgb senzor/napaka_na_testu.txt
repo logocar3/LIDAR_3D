@@ -1,0 +1,59 @@
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32doit-devkit-v1.html
+PLATFORM: Espressif 32 > DOIT ESP32 DEVKIT V1
+HARDWARE: ESP32 240MHz 320KB RAM (4MB Flash)
+DEBUG: CURRENT(esp-prog) EXTERNAL(esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+Library Dependency Finder -> http://bit.ly/configure-pio-ldf
+LDF MODES: FINDER(chain) COMPATIBILITY(soft)
+Collected 27 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- <EV3UARTSensor>
+Compiling .pioenvs\esp32doit-devkit-v1\src\main.cpp.o
+Compiling .pioenvs\esp32doit-devkit-v1\lib441\EV3UARTSensor\EV3UARTSensor.cpp.o
+Compiling .pioenvs\esp32doit-devkit-v1\lib441\EV3UARTSensor\SoftwareSerial.cpp.o
+C:\Users\Kevin\.platformio\lib\EV3UARTSensor\SoftwareSerial.cpp:1:18: fatal error: mbed.h: No such file or directory
+
+**************************************************************
+* Looking for mbed.h dependency? Check our library registry!
+*
+* CLI  > platformio lib search "header:mbed.h"
+* Web  > https://platformio.org/lib/search?query=header:mbed.h
+*
+**************************************************************
+
+compilation terminated.
+In file included from C:\Users\Kevin\.platformio\lib\EV3UARTSensor/EV3UARTSensor.h:9:0,
+from src\main.cpp:1:
+C:\Users\Kevin\.platformio\lib\EV3UARTSensor/SoftwareSerial.h:16:18: fatal error: mbed.h: No such file or directory
+
+**************************************************************
+* Looking for mbed.h dependency? Check our library registry!
+*
+* CLI  > platformio lib search "header:mbed.h"
+* Web  > https://platformio.org/lib/search?query=header:mbed.h
+*
+**************************************************************
+
+compilation terminated.
+*** [.pioenvs\esp32doit-devkit-v1\lib441\EV3UARTSensor\SoftwareSerial.cpp.o] Error 1
+Compiling .pioenvs\esp32doit-devkit-v1\FrameworkArduino\WMath.cpp.o*** [.pioenvs\esp32doit-devkit-v1\src\main.cpp.o] Error 1
+
+In file included from C:\Users\Kevin\.platformio\lib\EV3UARTSensor\EV3UARTSensor.h:9:0,
+from C:\Users\Kevin\.platformio\lib\EV3UARTSensor\EV3UARTSensor.cpp:8:
+C:\Users\Kevin\.platformio\lib\EV3UARTSensor/SoftwareSerial.h:16:18: fatal error: mbed.h: No such file or directory
+
+**************************************************************
+* Looking for mbed.h dependency? Check our library registry!
+*
+* CLI  > platformio lib search "header:mbed.h"
+* Web  > https://platformio.org/lib/search?query=header:mbed.h
+*
+**************************************************************
+
+compilation terminated.
+*** [.pioenvs\esp32doit-devkit-v1\lib441\EV3UARTSensor\EV3UARTSensor.cpp.o] Error 1
+======================================================================================================== [ERROR] Took 2.26 seconds ========================================================================================================
+The terminal process terminated with exit code: 1
+
+Terminal will be reused by tasks, press any key to close it.
